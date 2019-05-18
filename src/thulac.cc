@@ -21,12 +21,14 @@ void showhelp(){
 
 void print(const THULAC_result& result, bool seg_only, char separator) {
     for(int i = 0; i < result.size() - 1; i++) {
-        if(i != 0) cout << " ";
+        // if(i != 0) cout << " ";
         if(seg_only) {
-            cout << result[i].first;
+            cout << result[i].first << "\t" << result[i].first.length() / 3 << endl;
         }
         else {
-            cout << result[i].first << separator << result[i].second;
+            // cout << result[i].first << separator << result[i].second;
+            cout << result[i].first << "\t" << result[i].first.length() / 3 <<
+              "\t" << result[i].second << endl;
         }
     }
     cout << endl;
